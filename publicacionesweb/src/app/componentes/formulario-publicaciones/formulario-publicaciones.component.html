@@ -1,0 +1,78 @@
+<br>
+  <ion-card-subtitle color= "dark"> 
+    <b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Crea una nueva Publicacion</b>
+  </ion-card-subtitle>
+    <ion-card-content>
+
+      prueba
+      <ion-item>
+        <app-camara></app-camara>
+      </ion-item>
+           
+
+
+      <ion-item>
+        <ion-input  
+          [(ngModel)]="nuevaPublicacion.titulo"
+          required="required"
+          minlength="5"
+          #tituloInput="ngModel"
+          label="Titulo"
+          placeholder="Busco a mi perro">
+        </ion-input>
+      </ion-item>
+
+
+
+      <ion-item >
+        <ion-input 
+          [(ngModel)]="nuevaPublicacion.descripcion" 
+          required="required"
+          minlength="20" 
+          #descripcionInput="ngModel" 
+          label="Descripcion"> 
+         
+        </ion-input>
+      </ion-item>
+
+      <ion-item >
+        <ion-input 
+          [(ngModel)]="nuevaPublicacion.fecha" 
+          required="required"
+          #fechaInput="ngModel" 
+          label="Fecha"> 
+        </ion-input>
+      </ion-item>
+
+     
+
+
+      
+    <ion-button 
+        [disabled]="!descripcionInput.valid || !tituloInput.valid || !fechaInput.valid" 
+        (click)="onClick()"
+        fill="clear" 
+        slot="end"
+        aria-label="Botón para agregar publicacion">
+      <ion-label style="font-size: smaller;">AGREGAR publicacion
+      <ion-icon slot="icon-only" name="add-outline" />
+      </ion-label>
+    </ion-button>  
+      
+    <ion-item color="light" lines="none">
+      <ion-text
+      [hidden]="descripcionInput.valid || descripcionInput.pristine ||fechaInput.valid"
+      color = "danger">
+      Ingrese una descripcion con alemenos 20 caracteres !!
+    </ion-text>
+    <br>
+      <ion-text
+      [hidden]="tituloInput.valid || tituloInput.pristine"
+      color = "danger">
+      Ingrese un titulo con almenos 5 caracteres !!
+    </ion-text>
+    </ion-item> 
+    
+    
+  </ion-card-content>
+  

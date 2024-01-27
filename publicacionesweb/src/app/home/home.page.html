@@ -1,0 +1,38 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Publicaciones
+    </ion-title>
+    <ion-buttons slot="end">
+      <ion-button [routerLink]="['/configuraciones']">
+        <ion-icon icon="settings-outline" slot="icon-only" />
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-fab vertical="bottom" horizontal="end" slot="fixed">
+  <ion-fabe-button color="primary" [routerLink]="['/gestion-publicaciones']">
+    <ion-icon 
+    icon="add-circle" 
+    slot="icon-only" 
+    style="font-size: 40px;" 
+    color="primary"
+    >
+    </ion-icon>
+  </ion-fabe-button>
+</ion-fab>
+
+<ion-content [fullscreen]="true" >
+  <app-publicaciones 
+  [publicacionAleatoria]="publicacionAleatoria" 
+  [borrarPublicacionesEnInicio]="borrarPublicacionesEnInicio">
+
+  </app-publicaciones>
+</ion-content>
+
+
+
+
+
+

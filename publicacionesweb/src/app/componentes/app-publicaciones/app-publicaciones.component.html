@@ -1,0 +1,43 @@
+<div style="height: 80%; display: flex; align-items: center; justify-content: center;">
+  <ion-card color="light" *ngIf="publicacionAleatoria" >
+      <div>
+        <ion-text color="primary" [style.fontSize]="'1em'">
+        <p
+        class="descripcion" 
+        style="margin-left: 10px; margin-right: 10px;">
+        {{publicacionAleatoria.descripcion}}</p>
+      </ion-text>
+      </div>
+      <div class="ion-text-end">
+        <ion-text [style.fontSize]="'0.8em'">
+        <p
+        class="titulo" 
+        style="margin-right: 10px;">
+        {{publicacionAleatoria.titulo}}</p>
+      </ion-text>
+      </div>
+      <div class="ion-text-end">
+        <ion-text [style.fontSize]="'0.8em'">
+        <p
+        class="fecha" 
+        style="margin-right: 10px;">
+        {{publicacionAleatoria.fecha}}</p>
+      </ion-text>
+      </div>
+  </ion-card>
+  <ion-card color="light" *ngIf="!publicacionAleatoria" >
+    <ion-text color="primary" [style.fontSize]="'1em'"> <app-lista-publicaciones/></ion-text>
+  </ion-card>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+

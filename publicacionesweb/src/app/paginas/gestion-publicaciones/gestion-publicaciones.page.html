@@ -1,0 +1,20 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home" />
+      <ion-title>
+        Gestionar Publicaciones
+      </ion-title>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-card class="custom-card" color="light">
+    <!-- Formulario de agregar una nueva Publicacion-->
+    <app-formulario-publicaciones (onPublicacionAgregada)="onCrearPublicacion($event)" />
+  </ion-card>
+
+  <!-- Lista de publicaciones -->
+  <app-lista-publicaciones (publicacionEliminada)="manejarPublicacionEliminada($event)" [publicaciones]="listaPublicaciones"/>
+</ion-content>

@@ -1,0 +1,31 @@
+.publicacion-item {
+  display: grid;
+}
+
+.descripcion {
+  font-size: 0,8 em;
+  
+}
+
+.titulo {
+  font-size: 1,1 em; 
+  font-weight: lighter;
+  text-align: right;
+  color: #777; 
+}
+
+
+.fecha {
+  font-size: 0,5 em; 
+  font-weight: lighter;
+  text-align: right;
+  color: #777; 
+}
+
+
+.trash-button {
+  width: 80px;
+  height: 100%;
+  justify-self: flex-end;
+  font-size: 1em;
+}
